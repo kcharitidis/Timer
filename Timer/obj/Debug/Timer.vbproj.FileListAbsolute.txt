@@ -1,0 +1,10 @@
+C:\Users\kcharitidis\Documents\Visual Studio 2013\Projects\Timer\Timer\bin\Debug\Timer.exe.config
+C:\Users\kcharitidis\Documents\Visual Studio 2013\Projects\Timer\Timer\bin\Debug\Timer.exe
+C:\Users\kcharitidis\Documents\Visual Studio 2013\Projects\Timer\Timer\bin\Debug\Timer.pdb
+C:\Users\kcharitidis\Documents\Visual Studio 2013\Projects\Timer\Timer\bin\Debug\Timer.xml
+C:\Users\kcharitidis\Documents\Visual Studio 2013\Projects\Timer\Timer\obj\Debug\Timer.Form1.resources
+C:\Users\kcharitidis\Documents\Visual Studio 2013\Projects\Timer\Timer\obj\Debug\Timer.Resources.resources
+C:\Users\kcharitidis\Documents\Visual Studio 2013\Projects\Timer\Timer\obj\Debug\Timer.vbproj.GenerateResource.Cache
+C:\Users\kcharitidis\Documents\Visual Studio 2013\Projects\Timer\Timer\obj\Debug\Timer.exe
+C:\Users\kcharitidis\Documents\Visual Studio 2013\Projects\Timer\Timer\obj\Debug\Timer.xml
+C:\Users\kcharitidis\Documents\Visual Studio 2013\Projects\Timer\Timer\obj\Debug\Timer.pdb
