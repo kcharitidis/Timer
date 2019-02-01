@@ -8,3 +8,13 @@ C:\Users\kcharitidis\Documents\Visual Studio 2013\Projects\Timer\Timer\obj\Debug
 C:\Users\kcharitidis\Documents\Visual Studio 2013\Projects\Timer\Timer\obj\Debug\Timer.exe
 C:\Users\kcharitidis\Documents\Visual Studio 2013\Projects\Timer\Timer\obj\Debug\Timer.xml
 C:\Users\kcharitidis\Documents\Visual Studio 2013\Projects\Timer\Timer\obj\Debug\Timer.pdb
+C:\GitHub\Timer\Timer\bin\Debug\Timer.exe.config
+C:\GitHub\Timer\Timer\obj\Debug\Timer.exe
+C:\GitHub\Timer\Timer\obj\Debug\Timer.xml
+C:\GitHub\Timer\Timer\bin\Debug\Timer.exe
+C:\GitHub\Timer\Timer\bin\Debug\Timer.xml
+C:\GitHub\Timer\Timer\obj\Debug\Timer.Form1.resources
+C:\GitHub\Timer\Timer\obj\Debug\Timer.Resources.resources
+C:\GitHub\Timer\Timer\obj\Debug\Timer.vbproj.GenerateResource.Cache
+C:\GitHub\Timer\Timer\bin\Debug\Timer.pdb
+C:\GitHub\Timer\Timer\obj\Debug\Timer.pdb

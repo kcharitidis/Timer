@@ -62,15 +62,19 @@ Partial Class Form1
         Me.starthourtb = New System.Windows.Forms.ToolStripTextBox()
         Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
         Me.startmintb = New System.Windows.Forms.ToolStripTextBox()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripLabel3 = New System.Windows.Forms.ToolStripLabel()
+        Me.whours = New System.Windows.Forms.ToolStripTextBox()
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStrip1.SuspendLayout
-        Me.SuspendLayout
+        Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
+        Me.ToolStrip1.SuspendLayout()
+        Me.SuspendLayout()
         '
         'Label1
         '
-        Me.Label1.AutoSize = true
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(161,Byte))
-        Me.Label1.Location = New System.Drawing.Point(18, 36)
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(161, Byte))
+        Me.Label1.Location = New System.Drawing.Point(71, 48)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(58, 13)
         Me.Label1.TabIndex = 0
@@ -81,7 +85,7 @@ Partial Class Form1
         Me.passedSecondsLabel.AutoSize = True
         Me.passedSecondsLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(161, Byte))
         Me.passedSecondsLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.passedSecondsLabel.Location = New System.Drawing.Point(186, 106)
+        Me.passedSecondsLabel.Location = New System.Drawing.Point(239, 118)
         Me.passedSecondsLabel.Name = "passedSecondsLabel"
         Me.passedSecondsLabel.Size = New System.Drawing.Size(26, 17)
         Me.passedSecondsLabel.TabIndex = 1
@@ -91,7 +95,7 @@ Partial Class Form1
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(161, Byte))
-        Me.Label4.Location = New System.Drawing.Point(18, 60)
+        Me.Label4.Location = New System.Drawing.Point(71, 72)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(55, 13)
         Me.Label4.TabIndex = 3
@@ -101,7 +105,7 @@ Partial Class Form1
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(161, Byte))
-        Me.Label5.Location = New System.Drawing.Point(18, 108)
+        Me.Label5.Location = New System.Drawing.Point(71, 120)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(71, 13)
         Me.Label5.TabIndex = 4
@@ -117,7 +121,7 @@ Partial Class Form1
         Me.passedMinutesLabel.AutoSize = True
         Me.passedMinutesLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(161, Byte))
         Me.passedMinutesLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.passedMinutesLabel.Location = New System.Drawing.Point(137, 106)
+        Me.passedMinutesLabel.Location = New System.Drawing.Point(190, 118)
         Me.passedMinutesLabel.Name = "passedMinutesLabel"
         Me.passedMinutesLabel.Size = New System.Drawing.Size(26, 17)
         Me.passedMinutesLabel.TabIndex = 6
@@ -131,7 +135,7 @@ Partial Class Form1
         Me.passedHoursLabel.AutoSize = True
         Me.passedHoursLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(161, Byte))
         Me.passedHoursLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.passedHoursLabel.Location = New System.Drawing.Point(92, 106)
+        Me.passedHoursLabel.Location = New System.Drawing.Point(145, 118)
         Me.passedHoursLabel.Name = "passedHoursLabel"
         Me.passedHoursLabel.Size = New System.Drawing.Size(26, 17)
         Me.passedHoursLabel.TabIndex = 7
@@ -141,7 +145,7 @@ Partial Class Form1
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(161, Byte))
-        Me.Label2.Location = New System.Drawing.Point(18, 84)
+        Me.Label2.Location = New System.Drawing.Point(71, 96)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(70, 13)
         Me.Label2.TabIndex = 8
@@ -154,7 +158,7 @@ Partial Class Form1
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ctimehourLabel.AutoSize = True
         Me.ctimehourLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(161, Byte))
-        Me.ctimehourLabel.Location = New System.Drawing.Point(92, 82)
+        Me.ctimehourLabel.Location = New System.Drawing.Point(145, 94)
         Me.ctimehourLabel.Name = "ctimehourLabel"
         Me.ctimehourLabel.Size = New System.Drawing.Size(26, 17)
         Me.ctimehourLabel.TabIndex = 11
@@ -164,7 +168,7 @@ Partial Class Form1
         '
         Me.ctimeMinuteLabel.AutoSize = True
         Me.ctimeMinuteLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(161, Byte))
-        Me.ctimeMinuteLabel.Location = New System.Drawing.Point(137, 82)
+        Me.ctimeMinuteLabel.Location = New System.Drawing.Point(190, 94)
         Me.ctimeMinuteLabel.Name = "ctimeMinuteLabel"
         Me.ctimeMinuteLabel.Size = New System.Drawing.Size(26, 17)
         Me.ctimeMinuteLabel.TabIndex = 10
@@ -174,7 +178,7 @@ Partial Class Form1
         '
         Me.ctimeSecondLabel.AutoSize = True
         Me.ctimeSecondLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(161, Byte))
-        Me.ctimeSecondLabel.Location = New System.Drawing.Point(186, 82)
+        Me.ctimeSecondLabel.Location = New System.Drawing.Point(239, 94)
         Me.ctimeSecondLabel.Name = "ctimeSecondLabel"
         Me.ctimeSecondLabel.Size = New System.Drawing.Size(26, 17)
         Me.ctimeSecondLabel.TabIndex = 9
@@ -187,7 +191,7 @@ Partial Class Form1
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.stimeHourLabel.AutoSize = True
         Me.stimeHourLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(161, Byte))
-        Me.stimeHourLabel.Location = New System.Drawing.Point(92, 34)
+        Me.stimeHourLabel.Location = New System.Drawing.Point(145, 46)
         Me.stimeHourLabel.Name = "stimeHourLabel"
         Me.stimeHourLabel.Size = New System.Drawing.Size(26, 17)
         Me.stimeHourLabel.TabIndex = 14
@@ -197,7 +201,7 @@ Partial Class Form1
         '
         Me.stimeMinuteLabel.AutoSize = True
         Me.stimeMinuteLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(161, Byte))
-        Me.stimeMinuteLabel.Location = New System.Drawing.Point(137, 34)
+        Me.stimeMinuteLabel.Location = New System.Drawing.Point(190, 46)
         Me.stimeMinuteLabel.Name = "stimeMinuteLabel"
         Me.stimeMinuteLabel.Size = New System.Drawing.Size(26, 17)
         Me.stimeMinuteLabel.TabIndex = 13
@@ -207,7 +211,7 @@ Partial Class Form1
         '
         Me.stimeSecondLabel.AutoSize = True
         Me.stimeSecondLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(161, Byte))
-        Me.stimeSecondLabel.Location = New System.Drawing.Point(186, 34)
+        Me.stimeSecondLabel.Location = New System.Drawing.Point(239, 46)
         Me.stimeSecondLabel.Name = "stimeSecondLabel"
         Me.stimeSecondLabel.Size = New System.Drawing.Size(26, 17)
         Me.stimeSecondLabel.TabIndex = 12
@@ -220,7 +224,7 @@ Partial Class Form1
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.etimehourLabel.AutoSize = True
         Me.etimehourLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(161, Byte))
-        Me.etimehourLabel.Location = New System.Drawing.Point(92, 58)
+        Me.etimehourLabel.Location = New System.Drawing.Point(145, 70)
         Me.etimehourLabel.Name = "etimehourLabel"
         Me.etimehourLabel.Size = New System.Drawing.Size(26, 17)
         Me.etimehourLabel.TabIndex = 17
@@ -230,7 +234,7 @@ Partial Class Form1
         '
         Me.etimeMinuteLabel.AutoSize = True
         Me.etimeMinuteLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(161, Byte))
-        Me.etimeMinuteLabel.Location = New System.Drawing.Point(137, 58)
+        Me.etimeMinuteLabel.Location = New System.Drawing.Point(190, 70)
         Me.etimeMinuteLabel.Name = "etimeMinuteLabel"
         Me.etimeMinuteLabel.Size = New System.Drawing.Size(26, 17)
         Me.etimeMinuteLabel.TabIndex = 16
@@ -240,7 +244,7 @@ Partial Class Form1
         '
         Me.etimeSecondLabel.AutoSize = True
         Me.etimeSecondLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(161, Byte))
-        Me.etimeSecondLabel.Location = New System.Drawing.Point(186, 58)
+        Me.etimeSecondLabel.Location = New System.Drawing.Point(239, 70)
         Me.etimeSecondLabel.Name = "etimeSecondLabel"
         Me.etimeSecondLabel.Size = New System.Drawing.Size(26, 17)
         Me.etimeSecondLabel.TabIndex = 15
@@ -254,7 +258,7 @@ Partial Class Form1
         Me.ltimeHourLabel.AutoSize = True
         Me.ltimeHourLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(161, Byte))
         Me.ltimeHourLabel.ForeColor = System.Drawing.Color.Red
-        Me.ltimeHourLabel.Location = New System.Drawing.Point(92, 130)
+        Me.ltimeHourLabel.Location = New System.Drawing.Point(145, 142)
         Me.ltimeHourLabel.Name = "ltimeHourLabel"
         Me.ltimeHourLabel.Size = New System.Drawing.Size(26, 17)
         Me.ltimeHourLabel.TabIndex = 21
@@ -265,7 +269,7 @@ Partial Class Form1
         Me.ltimeMinuteLabel.AutoSize = True
         Me.ltimeMinuteLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(161, Byte))
         Me.ltimeMinuteLabel.ForeColor = System.Drawing.Color.Red
-        Me.ltimeMinuteLabel.Location = New System.Drawing.Point(137, 130)
+        Me.ltimeMinuteLabel.Location = New System.Drawing.Point(190, 142)
         Me.ltimeMinuteLabel.Name = "ltimeMinuteLabel"
         Me.ltimeMinuteLabel.Size = New System.Drawing.Size(26, 17)
         Me.ltimeMinuteLabel.TabIndex = 20
@@ -275,7 +279,7 @@ Partial Class Form1
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(161, Byte))
-        Me.Label7.Location = New System.Drawing.Point(18, 132)
+        Me.Label7.Location = New System.Drawing.Point(71, 144)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(54, 13)
         Me.Label7.TabIndex = 19
@@ -286,7 +290,7 @@ Partial Class Form1
         Me.ltimeSecondLabel.AutoSize = True
         Me.ltimeSecondLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(161, Byte))
         Me.ltimeSecondLabel.ForeColor = System.Drawing.Color.Red
-        Me.ltimeSecondLabel.Location = New System.Drawing.Point(186, 130)
+        Me.ltimeSecondLabel.Location = New System.Drawing.Point(239, 142)
         Me.ltimeSecondLabel.Name = "ltimeSecondLabel"
         Me.ltimeSecondLabel.Size = New System.Drawing.Size(26, 17)
         Me.ltimeSecondLabel.TabIndex = 18
@@ -297,7 +301,7 @@ Partial Class Form1
         Me.secondspassedLabel.AutoSize = True
         Me.secondspassedLabel.BackColor = System.Drawing.Color.Transparent
         Me.secondspassedLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(161, Byte))
-        Me.secondspassedLabel.Location = New System.Drawing.Point(92, 165)
+        Me.secondspassedLabel.Location = New System.Drawing.Point(145, 177)
         Me.secondspassedLabel.Name = "secondspassedLabel"
         Me.secondspassedLabel.Size = New System.Drawing.Size(0, 18)
         Me.secondspassedLabel.TabIndex = 22
@@ -305,7 +309,7 @@ Partial Class Form1
         '
         'ProgressBar1
         '
-        Me.ProgressBar1.Location = New System.Drawing.Point(18, 162)
+        Me.ProgressBar1.Location = New System.Drawing.Point(71, 174)
         Me.ProgressBar1.Name = "ProgressBar1"
         Me.ProgressBar1.Size = New System.Drawing.Size(194, 23)
         Me.ProgressBar1.TabIndex = 23
@@ -314,7 +318,7 @@ Partial Class Form1
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(161, Byte))
-        Me.Label3.Location = New System.Drawing.Point(122, 34)
+        Me.Label3.Location = New System.Drawing.Point(175, 46)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(13, 17)
         Me.Label3.TabIndex = 24
@@ -324,7 +328,7 @@ Partial Class Form1
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(161, Byte))
-        Me.Label6.Location = New System.Drawing.Point(167, 34)
+        Me.Label6.Location = New System.Drawing.Point(220, 46)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(13, 17)
         Me.Label6.TabIndex = 25
@@ -334,7 +338,7 @@ Partial Class Form1
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(161, Byte))
-        Me.Label8.Location = New System.Drawing.Point(167, 58)
+        Me.Label8.Location = New System.Drawing.Point(220, 70)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(13, 17)
         Me.Label8.TabIndex = 27
@@ -344,7 +348,7 @@ Partial Class Form1
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(161, Byte))
-        Me.Label9.Location = New System.Drawing.Point(122, 58)
+        Me.Label9.Location = New System.Drawing.Point(175, 70)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(13, 17)
         Me.Label9.TabIndex = 26
@@ -355,7 +359,7 @@ Partial Class Form1
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(161, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Label10.Location = New System.Drawing.Point(169, 106)
+        Me.Label10.Location = New System.Drawing.Point(222, 118)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(13, 17)
         Me.Label10.TabIndex = 31
@@ -366,7 +370,7 @@ Partial Class Form1
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(161, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Label11.Location = New System.Drawing.Point(122, 106)
+        Me.Label11.Location = New System.Drawing.Point(175, 118)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(13, 17)
         Me.Label11.TabIndex = 30
@@ -376,7 +380,7 @@ Partial Class Form1
         '
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(161, Byte))
-        Me.Label12.Location = New System.Drawing.Point(167, 82)
+        Me.Label12.Location = New System.Drawing.Point(220, 94)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(13, 17)
         Me.Label12.TabIndex = 29
@@ -386,7 +390,7 @@ Partial Class Form1
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(161, Byte))
-        Me.Label13.Location = New System.Drawing.Point(122, 82)
+        Me.Label13.Location = New System.Drawing.Point(175, 94)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(13, 17)
         Me.Label13.TabIndex = 28
@@ -397,7 +401,7 @@ Partial Class Form1
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(161, Byte))
         Me.Label14.ForeColor = System.Drawing.Color.Red
-        Me.Label14.Location = New System.Drawing.Point(169, 130)
+        Me.Label14.Location = New System.Drawing.Point(222, 142)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(13, 17)
         Me.Label14.TabIndex = 33
@@ -408,7 +412,7 @@ Partial Class Form1
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(161, Byte))
         Me.Label15.ForeColor = System.Drawing.Color.Red
-        Me.Label15.Location = New System.Drawing.Point(122, 130)
+        Me.Label15.Location = New System.Drawing.Point(175, 142)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(13, 17)
         Me.Label15.TabIndex = 32
@@ -416,10 +420,10 @@ Partial Class Form1
         '
         'ToolStrip1
         '
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel2, Me.starthourtb, Me.ToolStripLabel1, Me.startmintb, Me.ToolStripButton1})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel2, Me.starthourtb, Me.ToolStripLabel1, Me.startmintb, Me.ToolStripSeparator1, Me.ToolStripLabel3, Me.whours, Me.ToolStripButton1})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(234, 26)
+        Me.ToolStrip1.Size = New System.Drawing.Size(329, 26)
         Me.ToolStrip1.TabIndex = 35
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -434,7 +438,7 @@ Partial Class Form1
         Me.starthourtb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.starthourtb.MaxLength = 100
         Me.starthourtb.Name = "starthourtb"
-        Me.starthourtb.Size = New System.Drawing.Size(50, 20)
+        Me.starthourtb.Size = New System.Drawing.Size(40, 26)
         Me.starthourtb.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'ToolStripLabel1
@@ -448,8 +452,24 @@ Partial Class Form1
         '
         Me.startmintb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.startmintb.Name = "startmintb"
-        Me.startmintb.Size = New System.Drawing.Size(50, 26)
+        Me.startmintb.Size = New System.Drawing.Size(40, 26)
         Me.startmintb.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 26)
+        '
+        'ToolStripLabel3
+        '
+        Me.ToolStripLabel3.Name = "ToolStripLabel3"
+        Me.ToolStripLabel3.Size = New System.Drawing.Size(76, 23)
+        Me.ToolStripLabel3.Text = "Work Hours: "
+        '
+        'whours
+        '
+        Me.whours.Name = "whours"
+        Me.whours.Size = New System.Drawing.Size(40, 26)
         '
         'ToolStripButton1
         '
@@ -462,11 +482,16 @@ Partial Class Form1
         Me.ToolStripButton1.Size = New System.Drawing.Size(32, 23)
         Me.ToolStripButton1.Text = "Run"
         '
+        'NotifyIcon1
+        '
+        Me.NotifyIcon1.Icon = CType(resources.GetObject("NotifyIcon1.Icon"), System.Drawing.Icon)
+        Me.NotifyIcon1.Visible = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(234, 191)
+        Me.ClientSize = New System.Drawing.Size(329, 226)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.Label15)
@@ -502,15 +527,16 @@ Partial Class Form1
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Work Timer"
-        Me.ToolStrip1.ResumeLayout(false)
-        Me.ToolStrip1.PerformLayout
-        Me.ResumeLayout(false)
-        Me.PerformLayout
+        Me.ToolStrip1.ResumeLayout(False)
+        Me.ToolStrip1.PerformLayout()
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
 
-End Sub
+    End Sub
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents passedSecondsLabel As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
@@ -550,5 +576,9 @@ End Sub
     Friend WithEvents ToolStripLabel1 As System.Windows.Forms.ToolStripLabel
     Friend WithEvents startmintb As System.Windows.Forms.ToolStripTextBox
     Friend WithEvents ToolStripButton1 As System.Windows.Forms.ToolStripButton
+    Friend WithEvents NotifyIcon1 As System.Windows.Forms.NotifyIcon
+    Friend WithEvents ToolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents ToolStripLabel3 As System.Windows.Forms.ToolStripLabel
+    Friend WithEvents whours As System.Windows.Forms.ToolStripTextBox
 
 End Class
