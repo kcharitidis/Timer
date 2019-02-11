@@ -5,10 +5,19 @@ Public Class Form1
     Dim quotelist As New List(Of String)
     Dim qcount = 0
     Dim qall = 0
-    Dim qmethod = "tooltip"
+    Dim qmethod = "popup"
     Dim menuItem As New MenuItem("Exit")
-    Dim popupmenu As New MenuItem("PopUp")
+    Dim popupmenu As New MenuItem("Pop Up")
     Dim tooltipmenu As New MenuItem("Tooltip")
+    Dim quotemenu As New MenuItem("Quotes")
+    Dim quotestylemenu As New MenuItem("Quote Style")
+    Dim quoteintervalmenu As New MenuItem("Quote Interval")
+    Dim interval1menu As New MenuItem("Every 1 min.")
+    Dim interval5menu As New MenuItem("Every 5 min.")
+    Dim interval10menu As New MenuItem("Every 10 min.")
+    Dim interval15menu As New MenuItem("Every 15 min.")
+    Dim interval20menu As New MenuItem("Every 20 min.")
+    Dim qinterval = 10
     Dim workhours = 8
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
@@ -50,11 +59,12 @@ Public Class Form1
         Dim secondspassed As Integer = passedHoursLabel.Text * 3600 + passedMinutesLabel.Text * 60 + passedSecondsLabel.Text
         secondspassedLabel.Text = Format(secondspassed / (workhours * 3600) * 100, ".00") + "%"
         ProgressBar1.Value = secondspassed / (workhours * 3600) * 100
-        If (passedMinutesLabel.Text Mod 20 = 0 And passedSecondsLabel.Text = 0) Then
+        If ((passedMinutesLabel.Text Mod qinterval = 0 Or passedMinutesLabel.Text = "00") And passedSecondsLabel.Text = 0) Then
+            Randomize()
             If (qmethod = "popup") Then
-                MsgBox(quotelist(CInt(Math.Ceiling(Rnd() * qall))))
+                MsgBox(quotelist(Int(qall * Rnd())))
             Else
-                NotifyIcon1.BalloonTipText = quotelist(CInt(Math.Ceiling(Rnd() * qall)))
+                NotifyIcon1.BalloonTipText = quotelist(Int(qall * Rnd()))
                 NotifyIcon1.ShowBalloonTip(20000)
             End If
         End If
@@ -66,7 +76,8 @@ Public Class Form1
         reader()
         whours.Text = 8
         CreateContextMenu()
-        tooltipmenu.Checked = True
+        popupmenu.Checked = True
+        interval10menu.Checked = True
         NotifyIcon1.Text = "Work Timer"
     End Sub
     Private Sub loader()
@@ -102,20 +113,19 @@ Public Class Form1
 
         If (Val(etimehourLabel.Text) - Val(ctimehourLabel.Text) >= 0) Then
             If (Val(etimeMinuteLabel.Text) - Val(ctimeMinuteLabel.Text) >= 0) Then
-                ltimeHourLabel.Text = Format(Val(etimehourLabel.Text - ctimehourLabel.Text), "00")
+                ltimeHourLabel.Text = Format(Val(etimehourLabel.Text - ctimehourLabel.Text) , "00")
             Else
                 ltimeHourLabel.Text = Format(Val(etimehourLabel.Text - ctimehourLabel.Text) - 1, "00")
             End If
         End If
-        If (Val(etimeMinuteLabel.Text) - Val(ctimeMinuteLabel.Text) > 0) Then
-            ltimeMinuteLabel.Text = Format(Val(etimeMinuteLabel.Text) - Val(ctimeMinuteLabel.Text) - 1, "00")
-        ElseIf (Val(etimeMinuteLabel.Text) - Val(ctimeMinuteLabel.Text) = 0) Then
-            ltimeMinuteLabel.Text = "00"
+        If (Val(etimeMinuteLabel.Text) - Val(ctimeMinuteLabel.Text) >= 0) Then
+            ltimeMinuteLabel.Text = Format(Val(etimeMinuteLabel.Text) - Val(ctimeMinuteLabel.Text), "00")
         Else
-            ltimeMinuteLabel.Text = Format(60 + Val(etimeMinuteLabel.Text) - Val(ctimeMinuteLabel.Text), "00")
+            ltimeMinuteLabel.Text = Format(60 + Val(etimeMinuteLabel.Text) - Val(ctimeMinuteLabel.Text) - 1, "00")
         End If
         If ((Val(etimeSecondLabel.Text) - Val(ctimeSecondLabel.Text) >= 0)) Then
             ltimeSecondLabel.Text = Format(Val(etimeSecondLabel.Text) - Val(ctimeSecondLabel.Text), "00")
+
         Else
             ltimeSecondLabel.Text = Format((60 + etimeSecondLabel.Text - ctimeSecondLabel.Text), "00")
         End If
@@ -123,11 +133,6 @@ Public Class Form1
     End Sub
     Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs) Handles ToolStripButton1.Click
         reloader()
-        Dim x As Integer
-        Dim y As Integer
-        x = Screen.PrimaryScreen.WorkingArea.Width - 335
-        y = Screen.PrimaryScreen.WorkingArea.Height - 250
-        Me.Location = New Point(x, y)
 
     End Sub
     Private Sub reloader()
@@ -170,19 +175,77 @@ Public Class Form1
     Public Sub CreateContextMenu()
 
         Dim contextMenu As New ContextMenu
-        contextMenu.MenuItems.Add(popupmenu)
-        contextMenu.MenuItems.Add(tooltipmenu)
+        contextMenu.MenuItems.Add(quotemenu)
+        quotemenu.MenuItems.Add(quotestylemenu)
+        quotestylemenu.MenuItems.Add(popupmenu)
+        quotestylemenu.MenuItems.Add(tooltipmenu)
+        quotemenu.MenuItems.Add(quoteintervalmenu)
+        quoteintervalmenu.MenuItems.Add(interval1menu)
+        quoteintervalmenu.MenuItems.Add(interval5menu)
+        quoteintervalmenu.MenuItems.Add(interval10menu)
+        quoteintervalmenu.MenuItems.Add(interval15menu)
+        quoteintervalmenu.MenuItems.Add(interval20menu)
         contextMenu.MenuItems.Add(menuItem)
         NotifyIcon1.ContextMenu = contextMenu
 
         AddHandler menuItem.Click, AddressOf menuItem_Click
         AddHandler popupmenu.Click, AddressOf popupmenu_Click
         AddHandler tooltipmenu.Click, AddressOf tooltipmenu_Click
+        AddHandler interval1menu.Click, AddressOf interval1menu_Click
+        AddHandler interval5menu.Click, AddressOf interval5menu_Click
+        AddHandler interval10menu.Click, AddressOf interval10menu_Click
+        AddHandler interval15menu.Click, AddressOf interval15menu_Click
+        AddHandler interval20menu.Click, AddressOf interval20menu_Click
 
     End Sub
 
     Private Sub menuItem_Click(ByVal sender As Object, ByVal e As System.EventArgs)
         Me.Close()
+    End Sub
+
+    Private Sub interval5menu_Click(ByVal sender As Object, ByVal e As System.EventArgs)
+        qinterval = 5
+        interval1menu.Checked = False
+        interval5menu.Checked = True
+        interval10menu.Checked = False
+        interval15menu.Checked = False
+        interval20menu.Checked = False
+    End Sub
+
+    Private Sub interval1menu_Click(ByVal sender As Object, ByVal e As System.EventArgs)
+        qinterval = 1
+        interval1menu.Checked = True
+        interval5menu.Checked = False
+        interval10menu.Checked = False
+        interval15menu.Checked = False
+        interval20menu.Checked = False
+    End Sub
+
+    Private Sub interval10menu_Click(ByVal sender As Object, ByVal e As System.EventArgs)
+        qinterval = 10
+        interval1menu.Checked = False
+        interval5menu.Checked = False
+        interval10menu.Checked = True
+        interval15menu.Checked = False
+        interval20menu.Checked = False
+    End Sub
+
+    Private Sub interval15menu_Click(ByVal sender As Object, ByVal e As System.EventArgs)
+        qinterval = 15
+        interval1menu.Checked = False
+        interval5menu.Checked = False
+        interval10menu.Checked = False
+        interval15menu.Checked = True
+        interval20menu.Checked = False
+    End Sub
+
+    Private Sub interval20menu_Click(ByVal sender As Object, ByVal e As System.EventArgs)
+        qinterval = 20
+        interval1menu.Checked = False
+        interval5menu.Checked = False
+        interval10menu.Checked = False
+        interval15menu.Checked = False
+        interval20menu.Checked = True
     End Sub
 
     Private Sub popupmenu_Click(ByVal sender As Object, ByVal e As System.EventArgs)
